@@ -5,7 +5,7 @@ with sr.Microphone() as source:
     print('Say Something')
     audio = r.listen(source)
 
-# niet
+x = True
 
 try:
     print(r.recognize_sphinx(audio))
