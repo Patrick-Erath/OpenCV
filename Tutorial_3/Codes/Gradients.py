@@ -2,7 +2,7 @@ import cv2
 import matplotlib.pyplot as plt 
 import numpy as np 
 
-img_path = "./biosphere.jpg"
+img_path = "../biosphere.jpg"
 
 # Load image as grayscale
 img = cv2.imread(img_path, cv2.IMREAD_GRAYSCALE)
