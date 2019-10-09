@@ -1,5 +1,4 @@
 # OpenCV
 OpenCV Facial Detection
-#niet
-TryMe
-rrrr
+
+ECSE 415 - Computer Vision
