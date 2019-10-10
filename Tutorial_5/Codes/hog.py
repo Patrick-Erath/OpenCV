@@ -2,6 +2,10 @@ import cv2
 import numpy as np
 import matplotlib.pyplot as plt 
 
+##########################
+# Histogram Of Gradients #
+#########################
+
 path = cv2.imread("bird.png")
 img = cv2.cvtColor(path, cv2.COLOR_BGR2GRAY)
 
@@ -42,6 +46,11 @@ hog_feats = hog.compute(img) \
 # hog_feats.shape = (38, 58, 2, 2, 9)
 
 # Below, we take 38x58 (:, :), then change the block number
+# Each cell can belong to four different blocks,
+# In which each block consists of a cell and its 3 neighboring cells
+
+# Thus there are four possible chnanels, one for each block
+
 
 # Preview
 plt.figure(figsize = (13,3))
