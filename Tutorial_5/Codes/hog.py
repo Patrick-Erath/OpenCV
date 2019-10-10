@@ -2,13 +2,14 @@ import cv2
 import numpy as np
 import matplotlib.pyplot as plt 
 
-img = cv2.cvtColor(cv2.imread('../bird.png'), cv2.COLOR_BGR2GRAY)
+path = cv2.imread("bird.png")
+img = cv2.cvtColor(path, cv2.COLOR_BGR2GRAY)
 
 cell_size = (8, 8)		# height x width in pixels
 block_size = (2, 2)		# height x width in cells
 nbins = 9				# number of orientation bins
 
-
+# STEP 1 : Preprocessing
 # winSize is the size of the image cropped to multiple of the cell size
 # all arguments should be given in terms of number of pixels
 winX = img.shape[1] // cell_size[1] * cell_size[1]
@@ -17,8 +18,10 @@ winY = img.shape[0] // cell_size[0] * cell_size[0]
 blockX = block_size[1] * cell_size[1]
 blockY = block_size[0] * cell_size[0]
 
-#help(cv2.HOGDescriptor())
-#help(plt.gca())
+print("Block_X:", blockX)
+print("Block_Y:", blockY)
+print("Image Shape:", img.shape)
+print("Blocks:", img.shape[1]//8-1 + img.shape[0]//8-1)
 
 # create HoG object
 hog = cv2.HOGDescriptor(_winSize = (winX, winY),
@@ -40,13 +43,6 @@ hog_feats = hog.compute(img) \
 
 # Below, we take 38x58 (:, :), then change the block number
 
-#print(hog_feats.shape)
-#print(hog_feats[:, :,  0])
-#print(hog_feats[:, :,  1])
-#print(hog_feats[:, :,  1,0,0].shape)
-#print(hog_feats[:, :,  1,1,0].shape)
-
-
 # Preview
 plt.figure(figsize = (13,3))
 plt.subplot(151), plt.imshow(img, cmap='gray')
@@ -59,7 +55,7 @@ plt.gca().set_aspect('equal', adjustable='box')
 plt.title("HOG bin = 0, block = 1"), plt.xticks([]), plt.yticks([])
 
 plt.subplot(153)
-plt.pcolor(hog_feats[:, :, 0,1,0])  # hog_feats.shape = (38, 58, 9)	( : from beg->end)
+plt.pcolor(hog_feats[:, :, 0,1,0])  # hog_feats.shape = (38, 58)	( : from beg->end)
 plt.gca().invert_yaxis() # gca -> get current axis
 plt.gca().set_aspect('equal', adjustable='box') # set box aspect 1:1
 plt.title("HOG bin = 0, block = 2"), plt.xticks([]), plt.yticks([])
