@@ -1,8 +1,11 @@
 .DS_Store
+.idea
 Assignment1/.DS_Store
 Tutorial_4/.DS_Store
 Tutorial_5/venv
 Tutorial_5/.ipynb_checkpoints
-Assignment_2/.DS_Store
-Assignment_2/.ipynb_checkpoints
-Assignment_2/venv
+Assignment2/.DS_Store
+Assignment2/.ipynb_checkpoints
+Assignment2/venv
+Tutorial_6/venv
+Tutorial_6/.ipynb_checkpoints

@@ -37,6 +37,9 @@ mpl = np.float32([ keypoints_left[i].pt for (i, __) in GoodMatches])
 
 # Find homography and wrap image accordingly
 H, __ = cv2.findHomography(mpr, mpl, cv2.RANSAC, 4)
+
+print(H)
+
 wimg = cv2.warpPerspective(img_right, H, (img_right.shape[1]+img_left.shape[1], img_right.shape[0]))
 wimg[:,:img_left.shape[1],:] = img_left
 
