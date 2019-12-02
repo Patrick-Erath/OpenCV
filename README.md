@@ -13,7 +13,9 @@ An introduction to the automated processing, analysis, and understanding of imag
 
 ## Assignments Breakdown:
 <ul>
-  <li><b>Assignment 1 :</b> </li>
-  <li>TensorFlow</li>
-  <li>Skimage</li>
+  <li><b>Assignment 1 :</b> Image Filtering using thersholding, Sobel edge detection,  Canny Edge detecto, Laplacian of Gaussian</li>
+  <li><b>Assignment 2 :</b> </li>
+  <li><b>Assignment 3 :</b> </li>
+  <li><b>Assignment 4 :</b> </li>
+  <li><b>Final Project :</b> Facial Recognition project worked on with 4 other engineering students </li>
 </ul>
