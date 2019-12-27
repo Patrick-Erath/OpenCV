@@ -14,8 +14,8 @@ An introduction to the automated processing, analysis, and understanding of imag
 ## Assignments Breakdown:
 <ul>
   <li><b>Assignment 1 :</b> Image Filtering using thersholding, Sobel edge detection,  Canny Edge detecto, Laplacian of Gaussian</li>
-  <li><b>Assignment 2 :</b> </li>
-  <li><b>Assignment 3 :</b> </li>
-  <li><b>Assignment 4 :</b> </li>
+  <li><b>Assignment 2 :</b> </li> Finding Image Feture descriptors using SIFT
+  <li><b>Assignment 3 :</b> </li> Clustering using K-means, Expectation Maximization and Graph-Cut using MeanShift
+  <li><b>Assignment 4 :</b> </li> Feature extraction in order to classify and predict image types
   <li><b>Final Project :</b> Facial Recognition project worked on with 4 other engineering students </li>
 </ul>
